@@ -24,8 +24,8 @@ check_in: "14:00"
 check_out: "10:00"
 
 # Share image for Facebook / WhatsApp / Google (full URL or a path like images/uploads/photo.jpg)
-share_image: https://www.anakelodge.com/images/home_slides/homeslide_1.jpg
-logo: https://www.anakelodge.com/images/logo/logo_.png
+share_image: images/site/home_slides/homeslide_1.jpg
+logo: images/site/logo/logo_.png
 
 facebook: ""
 instagram: ""

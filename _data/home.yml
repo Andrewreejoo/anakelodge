@@ -11,35 +11,35 @@ hero_text: Reed-and-thatch rooms on the sand, sunrise over Lake Malawi from your
 
 # Hero slideshow (first photo loads first — make it your best)
 slides:
-  - src: https://www.anakelodge.com/images/home_slides/homeslide_1.jpg
+  - src: images/site/home_slides/homeslide_1.jpg
     caption: Sunset from the lodge beach
     alt: Sunset behind the island on Lake Malawi, seen from the beach at Anake Lodge, Cape Maclear
-  - src: https://www.anakelodge.com/images/home_slides/homeslide_0.jpg
+  - src: images/site/home_slides/homeslide_0.jpg
     caption: Chalets on the waterline
     alt: Grass-thatched chalets on the waterline at Anake Lodge with a palm tree standing in the lake
-  - src: https://www.anakelodge.com/images/home_slides/homeslide_3.jpg
+  - src: images/site/home_slides/homeslide_3.jpg
     caption: The lakefront dining deck
     alt: The lakefront dining deck at Anake Lodge looking out at the island
-  - src: https://www.anakelodge.com/images/home_slides/homeslide_8.jpg
+  - src: images/site/home_slides/homeslide_8.jpg
     caption: The lodge from the water
     alt: Thatched lakefront chalets at Anake Lodge seen from out on Lake Malawi
-  - src: https://www.anakelodge.com/images/home_slides/homeslide_4.png
+  - src: images/site/home_slides/homeslide_4.png
     caption: Gardens to the lake
     alt: Green lodge gardens running down to the edge of Lake Malawi
-  - src: https://www.anakelodge.com/images/home_slides/homeslide_2.jpg
+  - src: images/site/home_slides/homeslide_2.jpg
     caption: Shade on the beach
     alt: Guests relaxing in the shade along the beach at Cape Maclear
-  - src: https://www.anakelodge.com/images/home_slides/homeslide_5.jpg
+  - src: images/site/home_slides/homeslide_5.jpg
     caption: Dugout canoes at dawn
     alt: A fisherman and his son paddling a dugout canoe past Anake Lodge
-  - src: https://www.anakelodge.com/images/home_slides/homeslide_6.jpg
+  - src: images/site/home_slides/homeslide_6.jpg
     caption: Cichlids in the shallows
     alt: Cichlid fish swimming in the clear shallows in front of Anake Lodge
 
 intro_title: Where the lake sets the pace
 intro_text_1: Anake Lodge sits right on the sand in Chembe Village, Cape Maclear — inside Lake Malawi National Park, a UNESCO World Heritage Site famous for its crystal-clear water and hundreds of species of colourful cichlid fish.
 intro_text_2: Founded by Andrew Bita and built from local reed, bamboo and grass thatch, the lodge feels less like a hotel and more like home. Every room is named after one of Malawi's peoples — Chewa, Ngoni, Lhomwe and Nyanja — as a tribute to the country that shaped it.
-intro_image: https://www.anakelodge.com/images/other/moments/2%20house%20day%20time.jpg
+intro_image: images/site/other/moments/2-house-day-time.jpg
 
 facts:
   - title: On the beach
@@ -61,4 +61,4 @@ guide_paragraphs:
 cta_eyebrow: Book direct, best rate
 cta_title: Your room by the lake is waiting
 cta_text: Send your dates and we'll confirm by email or WhatsApp — usually within a few hours. Add an airport taxi in the same request.
-cta_image: https://www.anakelodge.com/images/other/5.jpg
+cta_image: images/site/other/5.jpg

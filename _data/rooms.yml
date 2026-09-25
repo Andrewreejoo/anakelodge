@@ -15,14 +15,14 @@ rooms:
     description: Wake to sunrise over the water, with direct views of Lake Malawi and the hills of the national park from your bed.
     features: [Lake view, Bed & breakfast, En-suite, Free Wi-Fi]
     photos:
-      - https://www.anakelodge.com/images/other/lakeview/1.jpg
-      - https://www.anakelodge.com/images/other/lakeview/2.jpg
-      - https://www.anakelodge.com/images/other/lakeview/3.jpg
-      - https://www.anakelodge.com/images/other/lakeview/4.jpg
-      - https://www.anakelodge.com/images/other/lakeview/5.jpg
-      - https://www.anakelodge.com/images/other/lakeview/6.jpg
-      - https://www.anakelodge.com/images/other/lakeview/7.jpg
-      - https://www.anakelodge.com/images/other/lakeview/8.jpg
+      - images/site/other/lakeview/1.jpg
+      - images/site/other/lakeview/2.jpg
+      - images/site/other/lakeview/3.jpg
+      - images/site/other/lakeview/4.jpg
+      - images/site/other/lakeview/5.jpg
+      - images/site/other/lakeview/6.jpg
+      - images/site/other/lakeview/7.jpg
+      - images/site/other/lakeview/8.jpg
 
   - name: Standard Room
     tribe: Chewa
@@ -34,13 +34,13 @@ rooms:
     description: Quiet, green and close to everything — set in the lodge gardens a short walk from the beach.
     features: [Garden view, Bed & breakfast, En-suite, Housekeeping]
     photos:
-      - https://www.anakelodge.com/images/rooms-booking/chewa/0.jpg
-      - https://www.anakelodge.com/images/rooms-booking/chewa/1.jpg
-      - https://www.anakelodge.com/images/rooms-booking/chewa/2.jpg
-      - https://www.anakelodge.com/images/rooms-booking/chewa/3.jpg
-      - https://www.anakelodge.com/images/rooms-booking/chewa/4.jpg
-      - https://www.anakelodge.com/images/rooms-booking/chewa/5.jpg
-      - https://www.anakelodge.com/images/rooms-booking/tumbuka/0.jpg
+      - images/site/rooms-booking/chewa/0.jpg
+      - images/site/rooms-booking/chewa/1.jpg
+      - images/site/rooms-booking/chewa/2.jpg
+      - images/site/rooms-booking/chewa/3.jpg
+      - images/site/rooms-booking/chewa/4.jpg
+      - images/site/rooms-booking/chewa/5.jpg
+      - images/site/rooms-booking/tumbuka/0.jpg
 
   - name: Family Room
     tribe: Lhomwe
@@ -52,11 +52,11 @@ rooms:
     description: Panoramic lake views, a private balcony and space for the whole family of up to four guests.
     features: [Sleeps 4, Balcony, Bed & breakfast, Free Wi-Fi]
     photos:
-      - https://www.anakelodge.com/images/rooms-booking/lhomwe/0.jpg
-      - https://www.anakelodge.com/images/rooms-booking/lhomwe/1.jpg
-      - https://www.anakelodge.com/images/rooms-booking/lhomwe/2.jpg
-      - https://www.anakelodge.com/images/rooms-booking/lhomwe/3.jpg
-      - https://www.anakelodge.com/images/rooms-booking/lhomwe/4.jpg
+      - images/site/rooms-booking/lhomwe/0.jpg
+      - images/site/rooms-booking/lhomwe/1.jpg
+      - images/site/rooms-booking/lhomwe/2.jpg
+      - images/site/rooms-booking/lhomwe/3.jpg
+      - images/site/rooms-booking/lhomwe/4.jpg
 
   - name: Dormitory
     tribe: Nyanja
@@ -68,4 +68,4 @@ rooms:
     description: A friendly shared room for backpackers and groups exploring Lake Malawi on a budget.
     features: [8 beds, Lockers, Free Wi-Fi]
     photos:
-      - https://www.anakelodge.com/images/rooms-booking/dormitory/0.jpg
+      - images/site/rooms-booking/dormitory/0.jpg
