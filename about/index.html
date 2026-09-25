@@ -1,0 +1,44 @@
+---
+data_seo: about
+breadcrumb: Our story
+permalink: /about/
+---
+{%- assign a = site.data.about -%}{%- assign s = site.data.settings -%}
+<section class="page-hero with-img">
+  <img src="{% include src.html src=a.image %}" alt="The lakeshore at Cape Maclear, Lake Malawi" fetchpriority="high">
+  <div class="wrap">
+    <p class="eyebrow">{{ a.eyebrow }}</p>
+    <h1>{{ a.title }}</h1>
+    <p class="lede">{{ a.intro }}</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap founder">
+    <div class="founder-img reveal"><img src="{% include src.html src=a.founder_image %}" alt="{{ a.founder_name }}, founder of Anake Lodge, Cape Maclear" loading="lazy" width="700" height="875"></div>
+    <div class="reveal">
+      <p class="eyebrow">Founder · {{ a.founder_name }}</p>
+      <h2 class="h2">{{ a.founder_title }}</h2>
+      {%- for p in a.founder_paragraphs %}<p class="muted big">{{ p }}</p>{% endfor %}
+      <p style="margin-top:28px"><a class="btn btn-sun" href="{{ '/booking/' | relative_url }}">Come feel it for yourself</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="here">
+  <div class="wrap">
+    <div class="head reveal">
+      <p class="eyebrow">Getting here</p>
+      <h2>Find your way to Anake Lodge</h2>
+      <p>We're on the beach in {{ s.address_street }}, inside Lake Malawi National Park. Fly into Lilongwe or Blantyre and we'll arrange a fixed-rate taxi. Taxi questions: <a href="mailto:{{ s.taxi_email }}" style="color:#ffc79f">{{ s.taxi_email }}</a></p>
+    </div>
+    <div class="routes">
+      {%- for t in site.data.transfers.routes %}
+      <div class="route reveal"><span class="from">{{ t.from }}</span><h3>{{ t.name }}</h3><p>{{ t.text }}</p><b>${{ t.price }}</b><small>fixed price per vehicle</small></div>
+      {%- endfor %}
+    </div>
+    <div class="map reveal">
+      <iframe title="Map showing Anake Lodge at Cape Maclear, Lake Malawi" src="https://maps.google.com/maps?q={{ s.latitude }},{{ s.longitude }}&z=13&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
