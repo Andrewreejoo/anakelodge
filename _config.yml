@@ -1,0 +1,31 @@
+# ------------------------------------------------------------------
+#  Anake Lodge — site settings (GitHub Pages / Jekyll)
+#  Most day-to-day content lives in the _data/ folder, not here.
+# ------------------------------------------------------------------
+
+title: Anake Lodge
+tagline: Lakeside lodge in Cape Maclear, Lake Malawi
+
+# The address the site will live at. Change these two lines when you deploy:
+#  - Custom domain (recommended):  url: "https://www.anakelodge.com"   baseurl: ""
+#  - GitHub address only:          url: "https://YOUR-USERNAME.github.io"  baseurl: "/YOUR-REPO-NAME"
+#    (leave baseurl "" if the repo is named YOUR-USERNAME.github.io)
+url: "https://andrewreejoo.github.io"
+baseurl: "/anakelodge"
+
+lang: en
+timezone: Africa/Blantyre
+
+plugins:
+  - jekyll-sitemap
+
+exclude:
+  - README.md
+  - tools/
+  - .pages.yml
+  - Gemfile
+  - Gemfile.lock
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: default }

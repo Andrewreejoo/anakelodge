@@ -1,0 +1,195 @@
+# Admin panel configuration for Pages CMS (https://pagescms.org)
+# Sign in at https://app.pagescms.org with the GitHub account that owns this repo.
+media:
+  input: images/uploads
+  output: images/uploads
+
+content:
+  - name: gallery
+    label: Gallery photos
+    type: file
+    path: _data/gallery.yml
+    fields:
+      - name: categories
+        label: Filter categories
+        type: string
+        list: true
+      - name: photos
+        label: Photos
+        type: object
+        list: true
+        fields:
+          - { name: src, label: Photo, type: image, required: true }
+          - { name: caption, label: Caption (also used by Google), type: string, required: true }
+          - name: category
+            label: Category
+            type: select
+            options:
+              values: [Rooms, Lakeshore, Experiences, Culture, Nature]
+
+  - name: rooms
+    label: Rooms & prices
+    type: file
+    path: _data/rooms.yml
+    fields:
+      - { name: note, label: Note under the rooms, type: text }
+      - name: rooms
+        label: Rooms
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Room name, type: string, required: true }
+          - { name: tribe, label: Tribe name, type: string }
+          - { name: price, label: Price (USD), type: number, required: true }
+          - { name: unit, label: Price label (e.g. "/ night"), type: string }
+          - { name: extra_guest, label: Extra per additional guest per night (USD), type: number }
+          - { name: per_person, label: Price is per person (dorm), type: boolean }
+          - { name: max_guests, label: Max guests per room, type: number }
+          - { name: description, label: Description, type: text }
+          - { name: features, label: Features, type: string, list: true }
+          - { name: photos, label: Photos, type: image, list: true }
+
+  - name: home
+    label: Home page
+    type: file
+    path: _data/home.yml
+    fields:
+      - { name: seo_title, label: Google title (max ~60 characters), type: string }
+      - { name: seo_description, label: Google description (max ~160 characters), type: text }
+      - { name: hero_eyebrow, label: Hero small text, type: string }
+      - { name: hero_title, label: Hero headline, type: string }
+      - { name: hero_text, label: Hero paragraph, type: text }
+      - name: slides
+        label: Slideshow photos
+        type: object
+        list: true
+        fields:
+          - { name: src, label: Photo, type: image }
+          - { name: caption, label: Caption, type: string }
+          - { name: alt, label: Description for Google & screen readers, type: string }
+      - { name: intro_title, label: Welcome heading, type: string }
+      - { name: intro_text_1, label: Welcome paragraph 1, type: text }
+      - { name: intro_text_2, label: Welcome paragraph 2, type: text }
+      - { name: intro_image, label: Welcome photo, type: image }
+      - name: facts
+        label: Quick facts
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Text, type: string }
+      - { name: guide_title, label: Travel guide heading, type: string }
+      - { name: guide_paragraphs, label: Travel guide paragraphs, type: text, list: true }
+      - { name: cta_eyebrow, label: Bottom banner small text, type: string }
+      - { name: cta_title, label: Bottom banner heading, type: string }
+      - { name: cta_text, label: Bottom banner text, type: text }
+      - { name: cta_image, label: Bottom banner photo, type: image }
+
+  - name: experiences
+    label: Things to do
+    type: file
+    path: _data/experiences.yml
+    fields:
+      - { name: title, label: Heading, type: string }
+      - { name: subtitle, label: Intro, type: text }
+      - name: items
+        label: Activities (first 6 are shown)
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Title, type: string }
+          - { name: text, label: Text, type: string }
+          - { name: image, label: Photo, type: image }
+
+  - name: transfers
+    label: Transfers
+    type: file
+    path: _data/transfers.yml
+    fields:
+      - { name: title, label: Heading, type: string }
+      - { name: subtitle, label: Intro, type: text }
+      - name: routes
+        label: Routes
+        type: object
+        list: true
+        fields:
+          - { name: from, label: Small label, type: string }
+          - { name: name, label: Route, type: string }
+          - { name: text, label: Description, type: string }
+          - { name: price, label: Price per vehicle (USD), type: number }
+
+  - name: reviews
+    label: Guest reviews
+    type: file
+    path: _data/reviews.yml
+    fields:
+      - name: reviews
+        label: Reviews
+        type: object
+        list: true
+        fields:
+          - { name: name, label: Guest name, type: string }
+          - { name: from, label: From, type: string }
+          - { name: stars, label: Stars (1-5), type: number }
+          - { name: text, label: Review, type: text }
+
+  - name: faq
+    label: FAQ
+    type: file
+    path: _data/faq.yml
+    fields:
+      - name: questions
+        label: Questions
+        type: object
+        list: true
+        fields:
+          - { name: q, label: Question, type: string }
+          - { name: a, label: Answer, type: text }
+
+  - name: about
+    label: About page
+    type: file
+    path: _data/about.yml
+    fields:
+      - { name: seo_title, label: Google title, type: string }
+      - { name: seo_description, label: Google description, type: text }
+      - { name: eyebrow, label: Small text, type: string }
+      - { name: title, label: Heading, type: string }
+      - { name: intro, label: Intro, type: text }
+      - { name: image, label: Header photo, type: image }
+      - { name: founder_name, label: Founder name, type: string }
+      - { name: founder_image, label: Founder photo, type: image }
+      - { name: founder_title, label: Founder heading, type: string }
+      - { name: founder_paragraphs, label: Founder paragraphs, type: text, list: true }
+
+  - name: settings
+    label: Contact & settings
+    type: file
+    path: _data/settings.yml
+    fields:
+      - { name: name, label: Lodge name, type: string }
+      - { name: alternate_name, label: Other name, type: string }
+      - { name: founder, label: Founder, type: string }
+      - { name: founded, label: Year founded, type: number }
+      - { name: booking_email, label: Booking email (receives all booking requests), type: string }
+      - { name: whatsapp, label: WhatsApp number (digits only, with 265), type: string }
+      - { name: phone_display, label: Phone as shown, type: string }
+      - { name: taxi_email, label: Taxi email, type: string }
+      - { name: address_street, label: Street / village, type: string }
+      - { name: address_locality, label: Town, type: string }
+      - { name: address_region, label: District, type: string }
+      - { name: address_country, label: Country code, type: string }
+      - { name: address_country_name, label: Country, type: string }
+      - { name: latitude, label: Latitude, type: number }
+      - { name: longitude, label: Longitude, type: number }
+      - { name: price_from, label: Lowest price (USD), type: number }
+      - { name: price_range, label: Price range, type: string }
+      - { name: check_in, label: Check-in time, type: string }
+      - { name: check_out, label: Check-out time, type: string }
+      - { name: share_image, label: Social share photo, type: image }
+      - { name: logo, label: Logo, type: image }
+      - { name: facebook, label: Facebook page URL, type: string }
+      - { name: instagram, label: Instagram URL, type: string }
+      - { name: tripadvisor, label: Tripadvisor URL, type: string }
+      - { name: taxi_site, label: Anake Taxi website, type: string }
+      - { name: tours_site, label: Anake Tours website, type: string }
