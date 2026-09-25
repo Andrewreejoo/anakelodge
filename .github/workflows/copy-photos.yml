@@ -1,0 +1,32 @@
+# Copies every photo still hosted on the old website into this repository
+# (images/site/) and updates the links in _data/. Runs once when this file
+# is added, and can be re-run any time from the Actions tab ("Run workflow").
+name: Copy photos from old website
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/copy-photos.yml
+
+permissions:
+  contents: write
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Download photos and update links
+        run: python3 tools/localize_images.py
+      - name: Commit the photos
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add images/site _data
+          if git diff --cached --quiet; then echo "Nothing to copy"; exit 0; fi
+          git commit -m "Copy photos from old website into the site"
+          git push
