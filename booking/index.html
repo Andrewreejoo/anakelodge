@@ -1,0 +1,107 @@
+---
+title: Book Direct | Anake Lodge Cape Maclear – Best Rate on Lake Malawi Accommodation
+description: Book your room at Anake Lodge, Cape Maclear direct for the best rate. Lake view rooms, family rooms and dorm beds from $35 with breakfast. Add an airport transfer. Confirmation by email or WhatsApp.
+breadcrumb: Book direct
+permalink: /booking/
+---
+{%- assign s = site.data.settings -%}
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">Book direct · best rate</p>
+    <h1>Book your stay at Anake Lodge</h1>
+    <p class="lede">Tell us your dates and room. Your request goes straight to our team by email and WhatsApp, and we'll reply to confirm availability and payment — usually within a few hours.</p>
+  </div>
+</section>
+
+<section class="booking">
+  <div class="wrap booking-grid">
+    <form id="booking-form" class="bform" novalidate>
+      <fieldset>
+        <legend>Your stay</legend>
+        <div class="row">
+          <label>Check in<input type="date" name="checkin" class="js-ci" required></label>
+          <label>Check out<input type="date" name="checkout" class="js-co" required></label>
+        </div>
+        <div class="row">
+          <label>Room type
+            <select name="room" required>
+              {%- for r in site.data.rooms.rooms %}<option value="{{ r.name | escape }}">{{ r.name }} ({{ r.tribe }}) – ${{ r.price }} {{ r.unit }}</option>{% endfor %}
+            </select>
+          </label>
+          <label>Guests
+            <select name="guests">{% for i in (1..12) %}<option{% if i == 2 %} selected{% endif %}>{{ i }}</option>{% endfor %}</select>
+          </label>
+          <label>Rooms / beds
+            <select name="rooms">{% for i in (1..8) %}<option>{{ i }}</option>{% endfor %}</select>
+          </label>
+        </div>
+        <label id="transfer">Airport or safari transfer
+          <select name="transfer">
+            <option value="">No transfer needed</option>
+            {%- for t in site.data.transfers.routes %}<option value="{{ t.name | escape }}">{{ t.name }} – ${{ t.price }} per vehicle</option>{% endfor %}
+          </select>
+        </label>
+        <label class="js-arrival" hidden>Flight number / arrival time<input type="text" name="arrival" placeholder="e.g. ET877, landing 13:40 on 12 Oct"></label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your details</legend>
+        <div class="row">
+          <label>Full name<input type="text" name="name" autocomplete="name" required></label>
+          <label>Country<input type="text" name="country" autocomplete="country-name"></label>
+        </div>
+        <div class="row">
+          <label>Email<input type="email" name="email" autocomplete="email" required></label>
+          <label>WhatsApp / phone<input type="tel" name="phone" autocomplete="tel" placeholder="+44 7700 900123" required></label>
+        </div>
+        <label>Anything we should know?<textarea name="message" rows="4" placeholder="Special requests, activities you'd like to book, dietary needs…"></textarea></label>
+        <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      </fieldset>
+
+      <label class="check"><input type="checkbox" name="send_whatsapp" checked> Also open WhatsApp with my request, for the fastest reply</label>
+      <p class="form-error" role="alert" hidden></p>
+      <button class="btn btn-sun btn-block" type="submit">Send booking request</button>
+      <p class="small muted">No payment is taken now. We'll confirm availability and send payment details by email or WhatsApp.</p>
+    </form>
+
+    <aside class="summary" aria-live="polite">
+      <div class="summary-card">
+        <h2>Your request</h2>
+        <dl>
+          <dt>Room</dt><dd class="js-s-room">–</dd>
+          <dt>Dates</dt><dd class="js-s-dates">–</dd>
+          <dt>Nights</dt><dd class="js-s-nights">–</dd>
+          <dt>Guests</dt><dd class="js-s-guests">–</dd>
+          <dt>Transfer</dt><dd class="js-s-transfer">–</dd>
+        </dl>
+        <p class="est">Estimated total <b class="js-s-total">–</b></p>
+        <p class="small muted">Estimate in US dollars; your final price is confirmed by our team.</p>
+      </div>
+      <div class="contact-card">
+        <h3>Prefer to talk?</h3>
+        <p><a href="https://wa.me/{{ s.whatsapp }}" target="_blank" rel="noopener">WhatsApp {{ s.phone_display }}</a></p>
+        <p><a href="mailto:{{ s.booking_email }}">{{ s.booking_email }}</a></p>
+        <p class="small muted">Check-in from {{ s.check_in }} · check-out by {{ s.check_out }}</p>
+      </div>
+    </aside>
+
+    <div class="done" id="booking-done" hidden tabindex="-1">
+      <h2>Thank you — your request is on its way</h2>
+      <p class="js-done-msg">We've received your booking request and will reply by email or WhatsApp shortly.</p>
+      <p class="done-actions">
+        <a class="btn btn-sun js-done-wa" href="#" target="_blank" rel="noopener">Send on WhatsApp</a>
+        <a class="btn btn-line js-done-mail" href="#">Send by email instead</a>
+      </p>
+      <p><a href="{{ '/' | relative_url }}">← Back to the home page</a></p>
+    </div>
+  </div>
+</section>
+
+<script id="booking-config" type="application/json">
+{
+  "email": {{ s.booking_email | jsonify }},
+  "whatsapp": {{ s.whatsapp | jsonify }},
+  "rooms": [{% for r in site.data.rooms.rooms %}{"name": {{ r.name | jsonify }}, "price": {{ r.price | default: 0 }}, "unit": {{ r.unit | jsonify }}, "max": {{ r.max_guests | default: 2 }}, "extra": {{ r.extra_guest | default: 0 }}, "perPerson": {% if r.per_person %}true{% else %}false{% endif %}}{% unless forloop.last %},{% endunless %}{% endfor %}],
+  "transfers": [{% for t in site.data.transfers.routes %}{"name": {{ t.name | jsonify }}, "price": {{ t.price | default: 0 }}}{% unless forloop.last %},{% endunless %}{% endfor %}]
+}
+</script>
