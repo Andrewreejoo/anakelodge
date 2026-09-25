@@ -1,0 +1,71 @@
+# ROOMS & RATES — shown on the home page and in the booking form.
+# price is in US dollars. unit is the text shown after the price.
+# Add or remove room photos under "photos".
+
+note: Standard and Lake View rates are for one guest; add $20 per additional guest. Book direct for the best rate.
+
+rooms:
+  - name: Lake View Room
+    tribe: Ngoni
+    price: 70
+    unit: / night
+    extra_guest: 20        # added per night for each guest after the first (0 = none)
+    per_person: false      # true = price is per guest (dorm beds)
+    max_guests: 3
+    description: Wake to sunrise over the water, with direct views of Lake Malawi and the hills of the national park from your bed.
+    features: [Lake view, Bed & breakfast, En-suite, Free Wi-Fi]
+    photos:
+      - https://www.anakelodge.com/images/other/lakeview/1.jpg
+      - https://www.anakelodge.com/images/other/lakeview/2.jpg
+      - https://www.anakelodge.com/images/other/lakeview/3.jpg
+      - https://www.anakelodge.com/images/other/lakeview/4.jpg
+      - https://www.anakelodge.com/images/other/lakeview/5.jpg
+      - https://www.anakelodge.com/images/other/lakeview/6.jpg
+      - https://www.anakelodge.com/images/other/lakeview/7.jpg
+      - https://www.anakelodge.com/images/other/lakeview/8.jpg
+
+  - name: Standard Room
+    tribe: Chewa
+    price: 70
+    unit: / night
+    extra_guest: 20        # added per night for each guest after the first (0 = none)
+    per_person: false      # true = price is per guest (dorm beds)
+    max_guests: 3
+    description: Quiet, green and close to everything — set in the lodge gardens a short walk from the beach.
+    features: [Garden view, Bed & breakfast, En-suite, Housekeeping]
+    photos:
+      - https://www.anakelodge.com/images/rooms-booking/chewa/0.jpg
+      - https://www.anakelodge.com/images/rooms-booking/chewa/1.jpg
+      - https://www.anakelodge.com/images/rooms-booking/chewa/2.jpg
+      - https://www.anakelodge.com/images/rooms-booking/chewa/3.jpg
+      - https://www.anakelodge.com/images/rooms-booking/chewa/4.jpg
+      - https://www.anakelodge.com/images/rooms-booking/chewa/5.jpg
+      - https://www.anakelodge.com/images/rooms-booking/tumbuka/0.jpg
+
+  - name: Family Room
+    tribe: Lhomwe
+    price: 150
+    unit: / night, up to 4
+    extra_guest: 0
+    per_person: false
+    max_guests: 4
+    description: Panoramic lake views, a private balcony and space for the whole family of up to four guests.
+    features: [Sleeps 4, Balcony, Bed & breakfast, Free Wi-Fi]
+    photos:
+      - https://www.anakelodge.com/images/rooms-booking/lhomwe/0.jpg
+      - https://www.anakelodge.com/images/rooms-booking/lhomwe/1.jpg
+      - https://www.anakelodge.com/images/rooms-booking/lhomwe/2.jpg
+      - https://www.anakelodge.com/images/rooms-booking/lhomwe/3.jpg
+      - https://www.anakelodge.com/images/rooms-booking/lhomwe/4.jpg
+
+  - name: Dormitory
+    tribe: Nyanja
+    price: 35
+    unit: / person
+    extra_guest: 0
+    per_person: true
+    max_guests: 8
+    description: A friendly shared room for backpackers and groups exploring Lake Malawi on a budget.
+    features: [8 beds, Lockers, Free Wi-Fi]
+    photos:
+      - https://www.anakelodge.com/images/rooms-booking/dormitory/0.jpg

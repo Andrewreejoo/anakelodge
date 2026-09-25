@@ -1,0 +1,34 @@
+# Contact details used everywhere on the site (header, footer, booking form, Google data).
+name: Anake Lodge
+alternate_name: Anake Lake Lodge
+founder: Andrew Bita
+founded: 2009
+
+# All booking requests are sent to this email and WhatsApp number.
+booking_email: anakelodge@gmail.com
+whatsapp: "265888743955"          # digits only, with country code, no + or spaces
+phone_display: "+265 888 743 955"
+taxi_email: anaketaxi@gmail.com
+
+address_street: Chembe Village, Cape Maclear
+address_locality: Cape Maclear
+address_region: Mangochi District
+address_country: MW
+address_country_name: Malawi
+latitude: -14.0235
+longitude: 34.8415
+
+price_from: 35
+price_range: "$35 – $150"
+check_in: "14:00"
+check_out: "10:00"
+
+# Share image for Facebook / WhatsApp / Google (full URL or a path like images/uploads/photo.jpg)
+share_image: https://www.anakelodge.com/images/home_slides/homeslide_1.jpg
+logo: https://www.anakelodge.com/images/logo/logo_.png
+
+facebook: ""
+instagram: ""
+tripadvisor: ""
+taxi_site: https://www.anaketaxi.com
+tours_site: https://www.anaketours.com

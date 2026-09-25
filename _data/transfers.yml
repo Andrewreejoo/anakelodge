@@ -1,0 +1,17 @@
+# AIRPORT & SAFARI TRANSFERS — fixed prices per vehicle (US dollars).
+# These also appear as options in the booking form.
+title: Airport to lakeshore, all arranged
+subtitle: Fly into Lilongwe or Blantyre and our own Anake Taxi drivers will meet you at arrivals — and take you on to Liwonde for safari when you're ready. Fixed prices per vehicle, no haggling.
+routes:
+  - from: Kamuzu Int'l Airport (LLW)
+    name: Lilongwe Airport → Cape Maclear
+    text: Scenic route through central Malawi with first views of the lake.
+    price: 150
+  - from: Blantyre & Chileka (BLZ)
+    name: Blantyre → Cape Maclear
+    text: The southern route along the Shire River valley.
+    price: 160
+  - from: Safari connection
+    name: Cape Maclear → Liwonde
+    text: Lake to safari — straight to Liwonde National Park for game drives and Shire River boat trips.
+    price: 120

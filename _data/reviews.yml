@@ -1,0 +1,14 @@
+# GUEST REVIEWS — only publish real reviews from real guests.
+reviews:
+  - name: Tamanda P.
+    from: Lilongwe, Malawi
+    stars: 5
+    text: I loved how the lodge is built with reed, grass thatch and bamboo. It blends beautifully with the surroundings — and being so close to the lake made it special.
+  - name: Jonas K.
+    from: Cape Town, South Africa
+    stars: 5
+    text: Swimming in the lake every morning was my favourite part. The rooms are simple but very comfortable, and the lake air makes everything peaceful.
+  - name: Alice M.
+    from: London, UK
+    stars: 5
+    text: You can see the lake and hills from the lodge, and in the evening the sunset is amazing. A perfect place to relax.

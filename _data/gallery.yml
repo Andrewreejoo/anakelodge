@@ -1,0 +1,132 @@
+# GALLERY PHOTOS
+# Add a photo: add a new "- src / caption / category" block (or use the admin panel).
+# Remove a photo: delete its block. Order here = order on the page.
+# src can be a full web address or a file in this site, e.g. images/uploads/my-photo.jpg
+# category must be one of: Rooms, Lakeshore, Experiences, Culture, Nature
+
+categories: [Rooms, Lakeshore, Experiences, Culture, Nature]
+
+photos:
+  - src: https://www.anakelodge.com/images/home_slides/homeslide_1.jpg
+    caption: Sunset behind the island from the lodge beach
+    category: Lakeshore
+  - src: https://www.anakelodge.com/images/other/moments/2%20house%20day%20time.jpg
+    caption: Reed chalets on the waterline
+    category: Rooms
+  - src: https://www.anakelodge.com/images/home_slides/homeslide_0.jpg
+    caption: Morning calm on Lake Malawi
+    category: Lakeshore
+  - src: https://www.anakelodge.com/images/other/moments/family.jpg
+    caption: Family Room — Lhomwe
+    category: Rooms
+  - src: https://www.anakelodge.com/images/other/moments/sunset.jpg
+    caption: Sunset over the island from the deck
+    category: Lakeshore
+  - src: https://www.anakelodge.com/images/other/moments/night%20time%20all.jpg
+    caption: The lodge after dark
+    category: Rooms
+  - src: https://www.anakelodge.com/images/other/moments/fish.jpg
+    caption: Feeding the cichlids in the shallows
+    category: Nature
+  - src: https://www.anakelodge.com/images/home_slides/homeslide_8.jpg
+    caption: Lakefront chalets from the water
+    category: Rooms
+  - src: https://www.anakelodge.com/images/other/moments/the_beach.jpg
+    caption: The beach at Chembe village
+    category: Lakeshore
+  - src: https://www.anakelodge.com/images/home_slides/homeslide_5.jpg
+    caption: A fisherman and his son in a dugout canoe
+    category: Culture
+  - src: https://www.anakelodge.com/images/other/moments/andrew.jpg
+    caption: Slow mornings on the veranda
+    category: Experiences
+  - src: https://www.anakelodge.com/images/home_slides/homeslide_3.jpg
+    caption: The lakefront dining deck
+    category: Experiences
+  - src: https://www.anakelodge.com/images/other/moments/sunny.jpg
+    caption: Afternoon shade by the water
+    category: Lakeshore
+  - src: https://www.anakelodge.com/images/home_slides/homeslide_6.jpg
+    caption: Cichlid fish in the clear shallows
+    category: Nature
+  - src: https://www.anakelodge.com/images/home_slides/homeslide_4.png
+    caption: Gardens running down to the lake
+    category: Nature
+  - src: https://www.anakelodge.com/images/home_slides/homeslide_2.jpg
+    caption: Shade on the beach at Cape Maclear
+    category: Lakeshore
+  - src: https://www.anakelodge.com/images/home_slides/homeslide_7.jpg
+    caption: The shaded garden path
+    category: Nature
+  - src: https://www.anakelodge.com/images/home_slides/homeslide_9.png
+    caption: Chalets and gardens
+    category: Rooms
+  - src: https://www.anakelodge.com/images/other/5.jpg
+    caption: Anake Lodge on the shore of Lake Malawi
+    category: Lakeshore
+  - src: https://www.anakelodge.com/images/other/6.jpg
+    caption: The lakeshore at Cape Maclear
+    category: Lakeshore
+  - src: https://www.anakelodge.com/images/other/lakeview/1.jpg
+    caption: Lake View Room (Ngoni)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/other/lakeview/2.jpg
+    caption: Lake View Room (Ngoni)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/other/lakeview/3.jpg
+    caption: Lake View Room (Ngoni)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/other/lakeview/4.jpg
+    caption: Lake View Room (Ngoni)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/other/lakeview/5.jpg
+    caption: Lake View Room (Ngoni)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/other/lakeview/6.jpg
+    caption: Lake View Room (Ngoni)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/other/lakeview/7.jpg
+    caption: Lake View Room (Ngoni)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/other/lakeview/8.jpg
+    caption: Lake View Room (Ngoni)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/rooms-booking/chewa/0.jpg
+    caption: Standard Room (Chewa)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/rooms-booking/chewa/1.jpg
+    caption: Standard Room (Chewa)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/rooms-booking/chewa/2.jpg
+    caption: Standard Room (Chewa)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/rooms-booking/chewa/3.jpg
+    caption: Standard Room (Chewa)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/rooms-booking/chewa/4.jpg
+    caption: Standard Room (Chewa)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/rooms-booking/chewa/5.jpg
+    caption: Standard Room (Chewa)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/rooms-booking/tumbuka/0.jpg
+    caption: Standard Room (Tumbuka)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/rooms-booking/lhomwe/0.jpg
+    caption: Family Room (Lhomwe)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/rooms-booking/lhomwe/1.jpg
+    caption: Family Room (Lhomwe)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/rooms-booking/lhomwe/2.jpg
+    caption: Family Room (Lhomwe)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/rooms-booking/lhomwe/3.jpg
+    caption: Family Room (Lhomwe)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/rooms-booking/lhomwe/4.jpg
+    caption: Family Room (Lhomwe)
+    category: Rooms
+  - src: https://www.anakelodge.com/images/rooms-booking/dormitory/0.jpg
+    caption: Dormitory (Nyanja)
+    category: Rooms
