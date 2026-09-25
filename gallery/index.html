@@ -1,0 +1,44 @@
+---
+title: Photo Gallery | Anake Lodge, Cape Maclear – Lake Malawi Lodge Photos
+description: Photos of Anake Lodge in Cape Maclear — beachfront reed chalets, lake view and family rooms, sunsets over Lake Malawi, snorkelling with cichlids and life in Chembe village.
+breadcrumb: Gallery
+permalink: /gallery/
+---
+{%- assign g = site.data.gallery -%}
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">The gallery</p>
+    <h1>Anake Lodge &amp; Cape Maclear in pictures</h1>
+    <p class="lede">Wander the shoreline, the rooms and the long golden evenings on Lake Malawi — then come and see them for yourself.</p>
+  </div>
+</section>
+
+<section class="gallery-page">
+  <div class="wrap">
+    <div class="filters" role="toolbar" aria-label="Filter photos">
+      <button type="button" class="chip" data-filter="all" aria-pressed="true">All <span>{{ g.photos.size }}</span></button>
+      {%- for c in g.categories %}
+      {%- assign cnt = g.photos | where: "category", c | size %}
+      {%- if cnt > 0 %}<button type="button" class="chip" data-filter="{{ c | escape }}" aria-pressed="false">{{ c }} <span>{{ cnt }}</span></button>{% endif %}
+      {%- endfor %}
+    </div>
+    <div class="masonry" id="gallery-grid">
+      {%- for p in g.photos %}
+      <figure class="tile" data-cat="{{ p.category | escape }}">
+        <button type="button" class="tile-btn" aria-label="Open photo: {{ p.caption | escape }}">
+          <img src="{% include src.html src=p.src %}" alt="{{ p.caption | escape }} – Anake Lodge, Cape Maclear, Lake Malawi" loading="lazy" decoding="async">
+        </button>
+        <figcaption><span>{{ p.category }}</span>{{ p.caption }}</figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+    <div class="gallery-cta">
+      <h2>Like what you see?</h2>
+      <p>Rooms from ${{ site.data.settings.price_from }} a night, breakfast included.</p>
+      <a class="btn btn-sun" href="{{ '/booking/' | relative_url }}">Send a booking request</a>
+    </div>
+  </div>
+</section>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ImageGallery","name":"Anake Lodge photo gallery","about":{"@id":{{ '/#lodge' | absolute_url | jsonify }}},"image":[{% for p in g.photos %}{% capture u %}{% include abs.html src=p.src %}{% endcapture %}{"@type":"ImageObject","contentUrl":{{ u | jsonify }},"caption":{{ p.caption | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]}
+</script>
