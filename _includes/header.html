@@ -1,0 +1,14 @@
+<header class="site-header">
+  <nav class="wrap nav" aria-label="Main">
+    <a class="logo" href="{{ '/' | relative_url }}">Anake Lodge<span>Cape Maclear</span></a>
+    <button type="button" class="menu-btn" aria-expanded="false" aria-controls="menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <ul id="menu">
+      <li><a href="{{ '/#rooms' | relative_url }}">Rooms</a></li>
+      <li><a href="{{ '/#experiences' | relative_url }}">Things to do</a></li>
+      <li><a href="{{ '/#getting-here' | relative_url }}">Getting here</a></li>
+      <li><a href="{{ '/gallery/' | relative_url }}"{% if page.url == '/gallery/' %} aria-current="page"{% endif %}>Gallery</a></li>
+      <li><a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>Our story</a></li>
+      <li class="menu-book"><a class="btn btn-sun" href="{{ '/booking/' | relative_url }}">Book direct</a></li>
+    </ul>
+  </nav>
+</header>

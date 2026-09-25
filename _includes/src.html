@@ -1,0 +1,1 @@
+{%- assign _s = include.src | default: "" | strip -%}{%- if _s contains "://" -%}{{ _s }}{%- else -%}{{ _s | relative_url }}{%- endif -%}

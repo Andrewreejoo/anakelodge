@@ -1,0 +1,88 @@
+{%- assign s = site.data.settings -%}
+{%- if page.data_seo -%}{%- assign seo = site.data[page.data_seo] -%}{%- endif -%}
+{%- assign seo_title = page.seo_title | default: seo.seo_title | default: page.title | default: site.title -%}
+{%- assign seo_desc = page.description | default: seo.seo_description | default: site.tagline -%}
+{%- assign seo_img = page.image | default: s.share_image -%}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.className+=' js'</script>
+<title>{{ seo_title | escape }}</title>
+<meta name="description" content="{{ seo_desc | strip | escape }}">
+<link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+<meta name="robots" content="{% if page.noindex %}noindex, follow{% else %}index, follow, max-image-preview:large{% endif %}">
+<meta name="theme-color" content="#0f3b3a">
+<meta name="geo.region" content="MW-MH">
+<meta name="geo.placename" content="Cape Maclear, Malawi">
+<meta name="geo.position" content="{{ s.latitude }};{{ s.longitude }}">
+<meta name="ICBM" content="{{ s.latitude }}, {{ s.longitude }}">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ s.name }}">
+<meta property="og:title" content="{{ seo_title | escape }}">
+<meta property="og:description" content="{{ seo_desc | strip | escape }}">
+<meta property="og:url" content="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+<meta property="og:image" content="{% include abs.html src=seo_img %}">
+<meta property="og:image:alt" content="Anake Lodge on the beach at Cape Maclear, Lake Malawi">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ seo_title | escape }}">
+<meta name="twitter:description" content="{{ seo_desc | strip | escape }}">
+<meta name="twitter:image" content="{% include abs.html src=seo_img %}">
+
+<link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["LodgingBusiness", "Hotel"],
+  "@id": {{ '/#lodge' | absolute_url | jsonify }},
+  "name": {{ s.name | jsonify }},
+  "alternateName": {{ s.alternate_name | jsonify }},
+  "url": {{ '/' | absolute_url | jsonify }},
+  "description": {{ site.data.home.seo_description | jsonify }},
+  "image": [{% for sl in site.data.home.slides limit: 4 %}{% capture u %}{% include abs.html src=sl.src %}{% endcapture %}{{ u | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}],
+  "logo": {% capture u %}{% include abs.html src=s.logo %}{% endcapture %}{{ u | jsonify }},
+  "telephone": {{ s.whatsapp | prepend: '+' | jsonify }},
+  "email": {{ s.booking_email | jsonify }},
+  "priceRange": {{ s.price_range | jsonify }},
+  "currenciesAccepted": "USD, MWK",
+  "checkinTime": {{ s.check_in | jsonify }},
+  "checkoutTime": {{ s.check_out | jsonify }},
+  "foundingDate": {{ s.founded | append: '' | jsonify }},
+  "founder": { "@type": "Person", "name": {{ s.founder | jsonify }} },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": {{ s.address_street | jsonify }},
+    "addressLocality": {{ s.address_locality | jsonify }},
+    "addressRegion": {{ s.address_region | jsonify }},
+    "addressCountry": {{ s.address_country | jsonify }}
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": {{ s.latitude }}, "longitude": {{ s.longitude }} },
+  "hasMap": "https://www.google.com/maps?q={{ s.latitude }},{{ s.longitude }}",
+  "containedInPlace": { "@type": "Place", "name": "Lake Malawi National Park" },
+  "amenityFeature": [
+    {"@type":"LocationFeatureSpecification","name":"Beachfront","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Free Wi-Fi","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Breakfast included","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Airport shuttle","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Restaurant","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Snorkelling","value":true},
+    {"@type":"LocationFeatureSpecification","name":"Boat trips","value":true}
+  ],
+  "makesOffer": [{% for r in site.data.rooms.rooms %}
+    { "@type": "Offer", "name": {{ r.name | append: ' (' | append: r.tribe | append: ')' | jsonify }}, "price": {{ r.price | append: '' | jsonify }}, "priceCurrency": "USD", "url": {{ '/booking/' | absolute_url | append: '?room=' | append: r.name | uri_escape | jsonify }} }{% unless forloop.last %},{% endunless %}{% endfor %}
+  ],
+  "sameAs": [{{ s.taxi_site | jsonify }}, {{ s.tours_site | jsonify }}{% if s.facebook != "" and s.facebook %}, {{ s.facebook | jsonify }}{% endif %}{% if s.instagram != "" and s.instagram %}, {{ s.instagram | jsonify }}{% endif %}{% if s.tripadvisor != "" and s.tripadvisor %}, {{ s.tripadvisor | jsonify }}{% endif %}]
+}
+</script>
+{%- if page.breadcrumb %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+ {"@type":"ListItem","position":1,"name":"Home","item":{{ '/' | absolute_url | jsonify }}},
+ {"@type":"ListItem","position":2,"name":{{ page.breadcrumb | jsonify }},"item":{{ page.url | absolute_url | jsonify }}}]}
+</script>
+{%- endif %}
